@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    
+  </style>
+
+</head>
+<body class="container relative mx-auto px-4">
+    <h1 class="text-2xl mb-4 mt-4">Article List</h1>
+
+    <div class="rounded-md mb-4 w-48 border border-slate-500 px-2 py-1"><a href="/create">Create a new article</a></div>
+    {{range .}}
+    <div class="flex h-10">
+        <div>{{printf "%s" .Title}} {{printf "%s" .Author}}</div>
+        <div><a href="/edit?id={{.ID}}" class="rounded-md border border-slate-500 px-2 py-1 ml-6">edit</a></div>
+    </div>
+    
+    {{end}}
+</body>
+</html>

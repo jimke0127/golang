@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    
+  </style>
+
+</head>
+<body class="container relative mx-auto px-4">
+    <h1 class="mb-4 mt-4 text-slate-500">Create Article</h1>
+
+    <form action="/save" method="POST" >
+
+        <div class="flex mb-4">
+            <div class="w-20">Title</div><input name="title" value="" class="border border-slate-500"></input>
+        </div>
+        <div class="flex mb-4">
+            <div class="w-20">Author</div><input name="author" value="" class="border border-slate-500"></input>
+        </div>
+        <div class="flex mb-4">
+            <div class="w-20">Body</div><textarea name="body" rows="8" cols="50" class="border border-slate-500"></textarea>
+        </div>
+        <div class="flex mb-4">
+            <div class="w-20">Category</div><input name="category" value="" class="border border-slate-500"></input>
+        </div>
+        <div >
+            <input type="submit" value="Save" class="rounded-md border border-slate-500 px-2 py-1">
+        </div>
+    </form>
+    <div class="absolute left-20 bottom-0 rounded-md border border-slate-500 px-2 py-1"><a href="/view">取消</a></div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+cd gowiki
+go run wiki  启动服务器
+
+然后访问 http://localhost:8080/view
+
