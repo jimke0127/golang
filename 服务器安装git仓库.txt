@@ -1,0 +1,28 @@
+1、1. 先检查是否已经安装OpenSSH软件
+     
+dpkg --list | grep ssh
+
+systemctl status ssh   查看ssh服务的运行状态
+
+systemctl enable ssh   启动ssh服务
+
+2. 新建专属用户git，为了方便连接服务端仓库时使用
+
+adduser git
+
+然后输入两次密码，一路回车就创建好了
+
+3、切换到git用户：su - git
+4、创建仓库目录，比如 sudo mkdir repo
+5、cd repo, 初始化 git init --bare FirstProject.git, 即生成了一个git仓库
+6、cd ..   ,  在git主目录下先创建一个.ssh目录
+
+
+
+客户端：
+
+生成的公私钥： ssh-keygen -t rsa，生成公钥 id_rsa.pub
+
+把公钥追加到服务器端 /home/git/.ssh 目录下的 authorized_keys ，没有就先创建
+
+然后运行克隆： git clone git@x.x.x.x:/home/git/repo/FirstProject.git
