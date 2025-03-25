@@ -12,6 +12,8 @@ adduser git
 
 然后输入两次密码，一路回车就创建好了
 
+把新用户加到sudoers组：sudo adduser git sudo
+
 3、切换到git用户：su - git
 4、创建仓库目录，比如 sudo mkdir repo
 5、cd repo, 初始化 git init --bare FirstProject.git, 即生成了一个git仓库
